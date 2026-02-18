@@ -1,0 +1,16 @@
+{
+  "name": "dotfiles",
+  "description": "Personal dotfile management plugins",
+  "owner": {
+    "name": "ignasxv"
+  },
+  "plugins": [
+    {
+      "name": "stow-dotfile",
+      "description": "Move config files to ~/dotfiles and symlink them back using GNU Stow",
+      "version": "1.0.0",
+      "source": "./plugins/stow-dotfile",
+      "category": "productivity"
+    }
+  ]
+}
