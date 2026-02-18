@@ -1,0 +1,105 @@
+{
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.external.windowsExec": "C:\\Users\\X1Yoga\\Desktop\\Terminal.lnk",
+    "settingsSync.ignoredSettings": [
+        "terminal.external.windowsExec",
+        "terminal.external.linuxExec"
+    ],
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 100,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "arduino.useArduinoCli": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vscode-serial-monitor.customBaudRates": [
+        9600
+    ],
+    "editor.accessibilitySupport": "off",
+    "workbench.settings.useSplitJSON": true,
+
+
+    
+
+    "workbench.colorCustomizations": {
+    
+
+    },
+    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+    "editor.semanticTokenColorCustomizations": {
+
+
+
+    },
+    "redhat.telemetry.enabled": true,
+    "explorer.confirmDelete": false,
+    "explorer.consfirmDragAndDrop": false,
+    "remote.SSH.remotePlatform": {
+        "eecslab-1.case.edu": "linux"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "[arduino]": {
+        
+    },
+    "terminal.external.linuxExec": "/usr/bin/fish",
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.inlineSuggest.edits.showCollapsed": true,
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "svelte.enable-ts-plugin": true,
+    "[svelte]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "docker.extension.enableComposeLanguageServer": false,
+    "git.openRepositoryInParentFolders": "never",
+    "remote.portsAttributes": {
+        "8000": {
+            "protocol": "https"
+        }
+    },
+    "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+    "github.copilot.chat.reviewSelection.instructions": [
+
+    ],
+    "github.copilot.nextEditSuggestions.fixes": false,
+    "github.copilot.renameSuggestions.triggerAutomatically": false,
+    "github.copilot.chat.edits.suggestRelatedFilesFromGitHistory": false,
+    "github.copilot.chat.codeGeneration.useInstructionFiles": false,
+    "git.autofetch": true,
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+
+}
