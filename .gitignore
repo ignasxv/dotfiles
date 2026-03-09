@@ -14,3 +14,9 @@ claude/.claude/todos/
 
 # Claude marketplace (cloned on setup, not versioned)
 claude/.claude/plugins/marketplaces/claude-plugins-official/
+
+# Claude marketplace registry (machine-specific: contains absolute paths)
+claude/.claude/plugins/known_marketplaces.json
+
+# Fish universal variables (machine-specific: contains absolute paths and username)
+fish/.config/fish/fish_variables

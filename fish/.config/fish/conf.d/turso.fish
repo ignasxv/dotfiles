@@ -1,3 +1,3 @@
 
 # Turso
-export PATH="$PATH:/home/ignasxv/.turso"
+export PATH="$PATH:$HOME/.turso"
