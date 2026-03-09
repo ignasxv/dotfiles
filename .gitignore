@@ -1,0 +1,16 @@
+# Claude credentials (OAuth tokens)
+claude/.claude/.credentials.json
+
+# Claude ephemeral session data
+claude/.claude/history.jsonl
+claude/.claude/debug/
+claude/.claude/cache/
+claude/.claude/file-history/
+claude/.claude/paste-cache/
+claude/.claude/projects/
+claude/.claude/session-env/
+claude/.claude/shell-snapshots/
+claude/.claude/todos/
+
+# Claude marketplace (cloned on setup, not versioned)
+claude/.claude/plugins/marketplaces/claude-plugins-official/

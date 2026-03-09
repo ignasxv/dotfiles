@@ -1,0 +1,18 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/home/ignasxv/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-02-18T15:03:41.080Z"
+  },
+  "local": {
+    "source": {
+      "source": "local",
+      "path": "/home/ignasxv/.claude/plugins/marketplaces/local"
+    },
+    "installLocation": "/home/ignasxv/.claude/plugins/marketplaces/local",
+    "lastUpdated": "2026-03-09T00:00:00.000Z"
+  }
+}
