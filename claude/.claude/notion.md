@@ -1,9 +1,9 @@
 # Notion Configuration
 
 ## daily-knowledge database
-- Database URL: https://www.notion.so/fc9ac6768e41437daecb9fc29fa6b541
-- Data source ID: `38b3818c-d4e0-4fa4-a368-8babb9b6c640`
-- Parent: `{ "type": "data_source_id", "data_source_id": "38b3818c-d4e0-4fa4-a368-8babb9b6c640" }`
+- Database URL: https://www.notion.so/YOUR_DATABASE_ID
+- Data source ID: `YOUR_DATA_SOURCE_ID`
+- Parent: `{ "type": "data_source_id", "data_source_id": "YOUR_DATA_SOURCE_ID" }`
 
 ### Schema
 | Property | Type | Options |
