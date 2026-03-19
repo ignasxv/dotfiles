@@ -8,5 +8,6 @@ SETUVAR --export --path PATH:/var/lib/snapd/snap/bin\x1e/usr/local/bin\x1e/usr/b
 SETUVAR --export VISUAL:code\x20\x2d\x2dwait
 SETUVAR __done_min_cmd_duration:10000
 SETUVAR __done_notification_urgency_level:low
-SETUVAR __fish_initialized:4300
-SETUVAR fish_user_paths:/var/lib/snapd/snap/bin
+SETUVAR __fish_initialized:3800
+SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_user_paths:/Users/ignasxv/\x2eantigravity/antigravity/bin\x1e/var/lib/snapd/snap/bin

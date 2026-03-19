@@ -11,7 +11,7 @@
 | Name | title | lesson title |
 | Date | date | YYYY-MM-DD (today's date) |
 | Category | select | Linux / CLI, Programming, Tools & Setup, Networking, Security, Concepts, Other |
-| Tags | multi_select | terminal, notion, claude, linux, gotcha |
+| Tags | multi_select | terminal, notion, claude, linux, gotcha (ONLY these values are valid — do not use other tags) |
 | Source | rich_text | e.g. "Claude Code session", "YouTube", "article" |
 
 ### Entry content format

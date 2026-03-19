@@ -1,3 +1,24 @@
+## macos 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+# Added by Antigravity
+fish_add_path /Users/ignasxv/.antigravity/antigravity/bin
+
+zoxide init fish | source
+
+# pnpm
+set -gx PNPM_HOME "/Users/ignasxv/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+export PATH="$HOME/.local/bin:$PATH"
+
+# ===========================================
+
 ## Set values
 # Hide welcome message & ensure we are reporting fish as shell
 set fish_greeting
@@ -8,13 +29,13 @@ set -x SHELL /usr/bin/fish
 set -xU MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -xU MANROFFOPT "-c"
 
-# Hint to exit PKGBUILD review in Paru
-set -x PARU_PAGER "less -P \"Press 'q' to exit the PKGBUILD review.\""
+# Hint to exit PKGBUILD review in Paru (Linux/Arch only)
+# set -x PARU_PAGER "less -P \"Press 'q' to exit the PKGBUILD review.\""
 
-## Export variable need for qt-theme
-if type "qtile" >> /dev/null 2>&1
-   set -x QT_QPA_PLATFORMTHEME "qt5ct"
-end
+## Export variable need for qt-theme (Linux only)
+# if type "qtile" >> /dev/null 2>&1
+#    set -x QT_QPA_PLATFORMTHEME "qt5ct"
+# end
 
 # Set settings for https://github.com/franciscolourenco/done
 set -U __done_min_cmd_duration 10000
@@ -40,9 +61,9 @@ if test -d ~/Applications/depot_tools
     end
 end
 
-## Starship prompt
+# ## Starship prompt
 if status --is-interactive
-   source ("/usr/bin/starship" init fish --print-full-init | psub)
+   source (starship init fish --print-full-init | psub)
 end
 
 ## Advanced command-not-found hook
@@ -98,15 +119,15 @@ function copy
     end
 end
 
-# Cleanup local orphaned packages
-function cleanup
-    while pacman -Qdtq
-        sudo pacman -R (pacman -Qdtq)
-        if test "$status" -eq 1
-           break
-        end
-    end
-end
+# Cleanup local orphaned packages (Linux/Arch only)
+# function cleanup
+#     while pacman -Qdtq
+#         sudo pacman -R (pacman -Qdtq)
+#         if test "$status" -eq 1
+#            break
+#         end
+#     end
+# end
 
 ## Useful aliases
 
@@ -118,10 +139,10 @@ alias ll 'eza -l --color=always --group-directories-first --icons'  # long forma
 alias lt 'eza -aT --color=always --group-directories-first --icons' # tree listing
 alias l. 'eza -ald --color=always --group-directories-first --icons .*' # show only dotfiles
 
-# Replace some more things with better alternatives
-if not test -x /usr/bin/yay; and test -x /usr/bin/paru
-    alias yay 'paru'
-end
+# Replace some more things with better alternatives (Linux/Arch only)
+# if not test -x /usr/bin/yay; and test -x /usr/bin/paru
+#     alias yay 'paru'
+# end
 
 
 # Common use
@@ -130,44 +151,44 @@ alias ... 'cd ../..'
 alias .... 'cd ../../..'
 alias ..... 'cd ../../../..'
 alias ...... 'cd ../../../../..'
-alias big 'expac -H M "%m\t%n" | sort -h | nl'     # Sort installed packages according to size in MB (expac must be installed)
-alias dir 'dir --color=auto'
-alias fixpacman 'sudo rm /var/lib/pacman/db.lck'
-alias gitpkg 'pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
+# alias big 'expac -H M "%m\t%n" | sort -h | nl'   # Arch only: sort packages by size
+# alias dir 'dir --color=auto'                       # Linux coreutils only
+# alias fixpacman 'sudo rm /var/lib/pacman/db.lck'   # Arch only
+# alias gitpkg 'pacman -Q | grep -i "\-git" | wc -l' # Arch only
 alias grep 'ugrep --color=auto'
 alias egrep 'ugrep -E --color=auto'
 alias fgrep 'ugrep -F --color=auto'
-alias grubup 'sudo update-grub'
-alias hw 'hwinfo --short'                          # Hardware Info
-alias ip 'ip -color'
+# alias grubup 'sudo update-grub'                    # Linux only
+# alias hw 'hwinfo --short'                          # Linux only
+# alias ip 'ip -color'                               # Linux only (macOS ip differs)
 alias psmem 'ps auxf | sort -nr -k 4'
 alias psmem10 'ps auxf | sort -nr -k 4 | head -10'
-alias rmpkg 'sudo pacman -Rdd'
+# alias rmpkg 'sudo pacman -Rdd'                     # Arch only
 alias tarnow 'tar -acf '
 alias untar 'tar -zxvf '
-alias upd '/usr/bin/garuda-update'
-alias vdir 'vdir --color=auto'
+# alias upd '/usr/bin/garuda-update'                 # Garuda Linux only
+# alias vdir 'vdir --color=auto'                     # Linux coreutils only
 alias wget 'wget -c '
 
-# Get fastest mirrors
-alias mirror 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
-alias mirrora 'sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist'
-alias mirrord 'sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist'
-alias mirrors 'sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist'
+# Get fastest mirrors (Arch only)
+# alias mirror 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
+# alias mirrora 'sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist'
+# alias mirrord 'sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist'
+# alias mirrors 'sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist'
 
-# Help people new to Arch
-alias apt 'man pacman'
-alias apt-get 'man pacman'
+# Help people new to Arch (Linux only)
+# alias apt 'man pacman'
+# alias apt-get 'man pacman'
 alias please 'sudo'
 alias tb 'nc termbin.com 9999'
 alias helpme 'echo "To print basic information about a command use tldr <command>"'
-alias pacdiff 'sudo -H DIFFPROG=meld pacdiff'
+# alias pacdiff 'sudo -H DIFFPROG=meld pacdiff'      # Arch only
 
-# Get the error messages from journalctl
-alias jctl 'journalctl -p 3 -xb'
+# Get the error messages from journalctl (Linux/systemd only)
+# alias jctl 'journalctl -p 3 -xb'
 
-# Recent installed packages
-alias rip 'expac --timefmt="%Y-%m-%d %T" "%l\t%n %v" | sort | tail -200 | nl'
+# Recent installed packages (Arch only)
+# alias rip 'expac --timefmt="%Y-%m-%d %T" "%l\t%n %v" | sort | tail -200 | nl'
 
 ## Run fastfetch if session is interactive
 if status --is-interactive && type -q fastfetch
@@ -175,5 +196,5 @@ if status --is-interactive && type -q fastfetch
 end
 
 # app aliases
-alias chrome 'google-chrome-stable'
+# alias chrome 'google-chrome-stable'               # Linux only (macOS uses 'open -a "Google Chrome"')
 zoxide init fish | source
