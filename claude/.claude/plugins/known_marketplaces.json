@@ -1,0 +1,18 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/Users/ignasxv/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-04-01T02:51:28.173Z"
+  },
+  "notion-plugin-marketplace": {
+    "source": {
+      "source": "github",
+      "repo": "makenotion/claude-code-notion-plugin"
+    },
+    "installLocation": "/Users/ignasxv/.claude/plugins/marketplaces/notion-plugin-marketplace",
+    "lastUpdated": "2026-04-01T02:51:55.752Z"
+  }
+}

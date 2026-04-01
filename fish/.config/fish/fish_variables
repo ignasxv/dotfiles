@@ -10,4 +10,4 @@ SETUVAR __done_min_cmd_duration:10000
 SETUVAR __done_notification_urgency_level:low
 SETUVAR __fish_initialized:3800
 SETUVAR fish_key_bindings:fish_default_key_bindings
-SETUVAR fish_user_paths:/Users/ignasxv/\x2eantigravity/antigravity/bin\x1e/var/lib/snapd/snap/bin
+SETUVAR fish_user_paths:/Applications/Ghostty\x2eapp/Contents/MacOS\x1e/Users/ignasxv/\x2eantigravity/antigravity/bin\x1e/var/lib/snapd/snap/bin

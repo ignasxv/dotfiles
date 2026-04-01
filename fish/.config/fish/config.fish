@@ -8,6 +8,7 @@ set --export PATH $BUN_INSTALL/bin $PATH
 fish_add_path /Users/ignasxv/.antigravity/antigravity/bin
 
 zoxide init fish | source
+# fastfetch
 
 # pnpm
 set -gx PNPM_HOME "/Users/ignasxv/Library/pnpm"
@@ -23,7 +24,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # Hide welcome message & ensure we are reporting fish as shell
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
-set -x SHELL /usr/bin/fish
 
 # Use bat for man pages
 set -xU MANPAGER "sh -c 'col -bx | bat -l man -p'"

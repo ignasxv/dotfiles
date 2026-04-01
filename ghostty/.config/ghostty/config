@@ -42,10 +42,13 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
+
 # bg cofigs
-background = #0F172A
+background = #0b0e14
 foreground = #c6d0f5
 cursor-color = #f2d5cf
 cursor-text = #c6d0f5
 selection-background = #626880
 selection-foreground = #c6d0f5
+
+# theme = Github Dark Colorblind
