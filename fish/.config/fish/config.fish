@@ -190,6 +190,9 @@ alias helpme 'echo "To print basic information about a command use tldr <command
 # Recent installed packages (Arch only)
 # alias rip 'expac --timefmt="%Y-%m-%d %T" "%l\t%n %v" | sort | tail -200 | nl'
 
+
+alias claude-mad 'claude --dangerously-skip-permissions'
+
 ## Run fastfetch if session is interactive
 if status --is-interactive && type -q fastfetch
    fastfetch --config neofetch.jsonc
